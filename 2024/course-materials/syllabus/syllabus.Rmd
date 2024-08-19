@@ -1,23 +1,26 @@
 ---
-title: |
-  | SOC577
-  |  COMPUTATIONAL SOCIOLOGY
-  | Rutgers University
-  |
-  |  Syllabus
-author: "Thomas Davidson"
-date: "Spring 2024"
-urlcolor: blue
-output:
+output: 
   pdf_document:
-    keep_tex: yes
+    keep_tex: true
     fig_caption: yes
     latex_engine: pdflatex
-  word_document: default
 geometry: margin=1in
+
+title: 
+     |
+     | SOC 681
+     | COMPUTATIONAL SOCIAL SCIENCE USING R
+     | Purdue University
+     |
+     |  Syllabus
+
+author: Dr. Marcus Mann 
+date: "Fall 2024"
+
 fontfamily: mathpazo
 fontsize: 10pt
-header-includes: \linespread{1.05}
+header-includes:
+   - \linespread{1.05}
 ---
 
 
@@ -27,58 +30,41 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # CONTACT AND LOGISTICS
 
-E-mail: ``thomas.davidson@rutgers.edu``
+E-mail: ``mannml@purdue.edu``
 
-Website: ``https://github.com/t-davidson/computational-sociology``
+Website: ``https://github.com/marcone84/computational-sociology-1``
 
-Class meetings: Thursday 2:00-4:40 pm, Davison 129 (Douglass Campus)
+Class meetings: Wednesday 1:30-4:20 p.m. 
 
-Office hours: Monday 4:00-5:00 pm, Davison 109, or by appointment.
+Office hours: by appointment.
 
 # COURSE DESCRIPTION
-This course is designed to introduce students to computational methods and their applications to sociological research. We will discuss the computational toolkit from the bottom up, beginning with the fundamentals of programming and data analysis and management. To motivate the sociological applications of these techniques, we will explore social network analysis and agent-based modeling, two of the earliest areas of computational innovation in the discipline. Once these fundamentals are in place, we will consider different methods for collecting data from online sources including application programming interfaces, web-scraping, and online experiments. The remainder of the course will focus on computational methods for analyzing texts, images, and other types of data. First, we will cover various methods for the quantitative analysis of texts including word embeddings, topic modeling, and supervised learning. Second, we will discuss machine learning in more depth, assessing the relationship between prediction and explanation in social science, discussing bias and other limitations of these methods, as well as the opportunities these techniques present to work with images and multimodal data. Throughout the course students will gain hands-on experience with these different techniques and an understanding of their applications in cutting-edge sociological research. Overall, this course will provide students with a strong conceptual foundation in computational sociology and the ability to apply various techniques for data collection and analysis in their own research. All assignments will be conducted using the R programming language.
+This (crash) course is designed to provide a friendly and broad introduction to computational methods in social science using R. First, we will discuss the history and evolving role of computational methods in social science and their attendant implications for conducting ethical and generative research. Then we will discuss and practice the most basic programming skills in R including setting working directories, searching for and loading relevant packages, and basic date cleaning and manipulation. After this, the course will focus on introducing and applying a specific method of data collection or analysis every week. These will include 1) data wrangling, 2) working with API's, 3) experiments and surveys, 4) text analysis methods, 5) and data visualization. While this course does aim to broaden your awareness and skills in various kinds of data collection and analysis, it is not a statistics course, so do not expect detailed coverage of specific statistical methods or strategies. In general, we will study and discuss how computational methods have changed and broadened social scientific research, when they should and should not be applied, and - most importantly - how they can help you with your specific research agenda. 
 
 
 # PREREQUISITES AND PREPARATION
-This course is designed for students without any experience using computational methods or advanced statistics. Nonetheless, the course will proceed more efficiently if students without any such experience are willing to undertake some independent learning prior to the beginning of the course. In particular, I recommend students familiarize themselves with the R programming language, the RStudio computing environment, and RMarkdown documents, as we will be using these tools throughout the course. We will review these topics over the first few weeks of class, but the more familiar students are with these tools, the more time we can spend focusing on their sociological applications. Information on learning resources is provided on the course website.
+This course assumes no experience in R or other programming languages and is meant to be a gentle introduction to using R for social scientific research. That said, online resources are readily available to attain at least a rudimentary understanding of the basic skills needed to begin coding in R. One such resource is the Summer Institute in Computational Social Science websit here: https://sicss.io/overview 
 
 # ASSESSMENT
-There will be four homework assignments designed to help students to become familiar with the various methodological techniques covered in the course. A schedule of these assignments can be found in the course outline below. Students will also write an empirical paper over the course of the semester, worth 60% of the final grade. The paper will involve the collection of original data and preliminary analyses using one or more of the approaches covered in the course. I intend for the paper to be an opportunity for students to develop the basis for a qualifying exam, master's thesis, or dissertation chapter. Students are expected to make progress on the paper over the course of the semester. There will be three preliminary submissions related to the final paper: a proposal, initial data collection and descriptive analysis, and the implementation of methodological approach  (see course outline for a timeline). Each of these stages will be an opportunity to gain feedback on the final paper. The results will be presented during the last meeting and a final paper will be due at the end of the semester.
-
-## Grade breakdown
-- Homework assignments: 40% (10% each)
-- Final project (60%)
-    - Proposal (5%)
-    - Data collection and descriptive analysis (5%)
-    - Preliminary results (5%)
-    - Presentation (5%)
-    - Final paper (40%)
-
-# CHAT-GPT AND AI TOOLS
-Over the course of the semester we will consider how generative artificial intelligence tools can be used to advance computational research and will situate these tools in the context of earlier techniques. Not only can these technologies contribute to methodological advances, but they are a valuable pedagogical resource. I encourage you to draw on these tools to help you to learn to code and learn various computational methods. At the same time, however, these tools come with risks. For example, they can produce misleading or incorrect results, and hence must be used with caution. I am also concerned that overreliance on AI can undermine your learning. I strongly recommend trying to solve problems yourself or by consulting the course materials before resorting to AI for assistance.
-
-AI tools can also be used in ways that violate academic integrity policies. As such, you are prohibited for using ChatGPT or other AI tools to complete homework assignments or to write your final paper. Of course, the definition of AI tools becomes some what blurred when we think about tools like Grammarly, which uses similar technologies to help you improve your writing. Google Docs now has similar functionality and Microsoft is rolling this out in Office. I will permit you to use these tools to help you edit your work, but you may not use them to generate sentences or paragraphs of text. Similarly, I will permit you to use AI to help edit and debug code in your final project, but you may not use them to generate entire chunks of code. *You will be asked to provide a statement in assignments and your final project detailing any ways that AI tools were used.* Please contact me if you are unsure about whether a particular use case is acceptable.
+100% of your grade will be based on a "final paper" (at least 5,000 words) that uses some kind of computational method covered in this course. This paper will be assessed by 1) relevance to a particular field, 2) justification of hypotheses, 3) justification of computational method, and 3) clear communication of results (including at least one data viz) and implications. This paper has no other parameters. 
 
 # READINGS
-There are weekly reading assignments for this course. Please complete these before each class. These readings include methodological texts, reviews articles, and examples of how sociologists and other social scientists apply computational approaches in their research.
-
-## Required texts
-
-*All texts are available for free online.*
-
-- Matthew Salganik. 2017. \textit{\href{https://www.bitbybitbook.com/en/1st-ed/preface/}{Bit by Bit}}. Princeton University Press. ISBN: 0691196109
-- Wickham, Hadley, and Garrett Grolemund. 2023. \textit{\href{https://r4ds.hadley.nz/}{R for Data Science: Import, Tidy, Transform, Visualize, and Model Data}}. 2nd edition. (*R4DS*). O’Reilly Media, Inc. ISBN: 1491910399
-- Martin, James H., and Daniel Jurafsky. 2020. \textit{\href{https://web.stanford.edu/~jurafsky/slp3/}{Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition.}} 3rd edition. Prentice Hall. ISBN: 0131873210
-- Silge, Julia, and David Robinson. 2017. \textit{\href{https://www.tidytextmining.com/dtm.html}{Text Mining with R: A Tidy Approach.}} O’Reilly Media. ISBN: 1491981652
+There are weekly reading assignments for this course. These readings include methodological texts, reviews of relevant methodological and theoretical considerations, and examples of how sociologists and other social scientists apply computational approaches in their research. Given the range and complexity of some of the approaches we will cover in the course, I have included a diverse set of readings for each topic. Some students may find the instructional readings more useful whereas others may benefit from the academic articles applying these methods to substantive research questions. 
 
 
-# RESOURCES
+## Require texts and useful references
+*\* indicates a required text. All required texts and useful references are available for free online on the listed websites.*
 
-The course website contains all slides and resources used in class and is hosted on Github. Students will also use Github to submit assignments. We will be using Slack to communicate with one another during this course, all enrolled students will receive an invite to join the Slack channel. Please use your Rutgers email account for any email correspondence.
+- \*Matthew Salganik. 2017. *Bit by Bit*. Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/preface/
+- \*Wickham, Hadley, and Garrett Grolemund. 2016. *R for Data Science: Import, Tidy, Transform, Visualize, and Model Data*. (*R4DS*). O’Reilly Media, Inc.
+  https://r4ds.had.co.nz/
+- \*Silge, Julia, and David Robinson. 2017. *Text Mining with R: A Tidy Approach.* O’Reilly Media. https://www.tidytextmining.com/dtm.html.
+- \*Healy, Kieran. 2018. *Data Visualization: A Practical Introduction*. Princeton University Press. https://socviz.co/
+
 
 # COURSE POLICIES
 
-The Rutgers Sociology Department strives to create an environment that supports and affirms diversity in all manifestations, including race, ethnicity, gender, sexual orientation, religion, age, social class, disability status, region/country of origin, and political orientation. This class will be a space for tolerance, respect, and mutual dialogue. Students must abide by the Code of Student Conduct  at all times, including during lectures and in participation online. 
+The Purdue Sociology Department strives to create an environment that supports and affirms diversity in all manifestations, including race, ethnicity, gender, sexual orientation, religion, age, social class, disability status, region/country of origin, and political orientation. This class will be a space for tolerance, respect, and mutual dialogue. Students must abide by the Code of Student Conduct  at all times, including during lectures and in participation online. 
 
 All students must abide by the university’s Academic Integrity Policy. Violations of academic integrity will result in disciplinary action.
 
@@ -87,275 +73,138 @@ In accordance with University policy, if you have a documented disability and re
 
 # COURSE OUTLINE
 
-## Week 1, 1/18
+***This outline is tentative and subject to change.***
+
+## Week 1 - For 8/28
 ### Introduction to Computational Sociology
+<!--
+- Learning objectives:
+    - What is Computational Social Science?
+    - Getting started in R
+    - Setting up workflow and environment
+-->
 
 *Readings*
 
-- *R4DS*: Introduction, C1-4 (skim 1), skim 5, 6-8, 
-- *Bit by Bit*, C1
-- Lazer, David, et al. 2009. \href{https://doi.org/10.1126/science.1167742}{“Life in the Network: The Coming Age of Computational Social Science.”} *Science* 323 (5915): 721–23.
-- Golder, Scott A., and Michael W. Macy. 2014. \href{https://doi.org/10.1146/annurev-soc-071913-043145}{“Digital Footprints: Opportunities and Challenges for Online Social Research.”} *Annual Review of Sociology* 40 (1): 129–52.
-- Edelmann, Achim, Tom Wolff, Danielle Montagne, and Christopher A. Bail. 2020. \href{https://doi.org/10.1146/annurev-soc-121919-054621}{“Computational Social Science and Sociology.”} *Annual Review of Sociology* 46 (1)
-
-*Further reading*
-
-- Bail, Christopher A. 2014. \href{https://doi.org/10.1007/s11186-014-9216-5}{“The Cultural Environment: Measuring Culture with Big Data.”} *Theory and Society* 43 (3–4): 465–82.
-- Golder, Scott A., and Michael W. Macy. 2011. \href{https://doi.org/10.1126/science.1202775}{“Diurnal and Seasonal Mood Vary with Work, Sleep, and Daylength Across Diverse Cultures.”} *Science* 333(6051):1878–81.
+- *R4DS*: Preface, "Chapters" 4-7 on website
+- *Bit by Bit*, Chapter 1
+- Lazer, David, et al. 2009. “Computational Social Science.” *Science* 323 (5915): 721–23. https://www.science.org/doi/10.1126/science.1167742.
+- Edelmann, Achim, Tom Wolff, Danielle Montagne, and Christopher A. Bail. 2020. “Computational Social Science and Sociology.” *Annual Review of Sociology* 46 (1): https://www.annualreviews.org/doi/abs/10.1146/annurev-soc-121919-054621 
 
 
-## Week 2, 1/25
-### Data Structures & Networks
+## Week 2 - For 9/4
+### Data Structures, Wrangling, and the Tidyverse
+
+<!--
+- Learning objectives:
+    - Understand different types of data structure and "object oriented" programming
+    - Introduction to the tidyverse
+    - Boolean logic
+    - Loops
+    - Functions
+    - Classes
+-->
     
 *Readings*
 
-- *R4DS*: C27, 16
-- Bearman, Peter S., James Moody, and Katherine Stovel. 2004. \href{https://doi.org/10.1086/386272}{“Chains of Affection: The Structure of Adolescent Romantic and Sexual Networks.”} *American Journal of Sociology* 110(1):44–91.
-- Shi, Feng, Yongren Shi, Fedor A. Dokshin, James A. Evans, and Michael W. Macy. 2017. \href{https://doi.org/10.1038/s41562-017-0079}{“Millions of Online Book Co-Purchases Reveal Partisan Differences in the Consumption of Science.”} *Nature Human Behaviour* 1(4):0079.
+- *R4DS*: "Chapters" 9-13 on website
+- Golder, Scott A., and Michael W. Macy. 2014. “Digital Footprints: Opportunities and Challenges for Online Social Research.” *Annual Review of Sociology* 40 (1): 129–52. https://doi.org/10.1146/annurev-soc-071913-043145.
+- Bail, Christopher A. 2014. “The Cultural Environment: Measuring Culture with Big Data.” *Theory and Society* 43 (3–4): 465–82. https://doi.org/10.1007/s11186-014-9216-5.
 
 
-*Further reading*
 
-- Granovetter, Mark. 1973. \href{https://doi.org/10.1086/225469}{“The Strength of Weak Ties.”} *American Journal of Sociology* 78(6):1360–80.
-- Breiger, Ronald L. 1974. \href{https://doi.org/10.2307/2576011}{“The Duality of Persons and Groups.”} *Social Forces* 53(2):181–90.
-- Burt, Ronald S. 2004. \href{https://doi.org/10.1086/421787}{“Structural Holes and Good Ideas.”} *American Journal of Sociology* 110(2):349–99.
-- McPherson, Miller, Lynn Smith-Lovin, and James M. Cook. 2001. \href{https://doi.org/10.1146/annurev.soc.27.1.415}{“Birds of a Feather: Homophily in Social Networks.”} *Annual Review of Sociology* 415–44.
-- Block, Per, Christoph Stadtfeld, and Tom Snijders. 2019. \href{https://doi.org/10.1177/0049124116672680}{“Forms of Dependence: Comparing SAOMs and ERGMs From Basic Principles.”} *Sociological Methods & Research* 48 (1): 202–39.
+## Week 3 - For 9/11
+### Data Collection I: APIs
+<!--
+- Learning objectives:
 
-
-## Week 3, 2/1
-### Programming Fundamentals & Agent-based Modeling
+    - Documentation
+-->
 
 *Readings*
 
-- *R4DS*: C25-26, 18-19
-- Macy, Michael, and Robert Willer. 2002. \href{https://doi.org/10.1146/annurev.soc.28.110601.141117}{“From Factors to Actors: Computational Sociology and Agent-Based Modeling.”} *Annual Review of Sociology* 28 (1): 143–66.
-- Bruch, Elizabeth, and Jon Atwell. 2015. \href{https://doi.org/10.1177/0049124113506405}{“Agent-Based Models in Empirical Social Research.”} *Sociological Methods & Research* 44 (2): 186–221.
-- Centola, Damon, and Michael Macy. 2007. \href{https://doi.org/10.1086/521848}{“Complex Contagions and the Weakness of Long Ties.”} *American Journal of Sociology* 113(3):702–34.
-- DellaPosta, Daniel, Yongren Shi, and Michael Macy. 2015. \href{https://doi.org/10.1086/681254}{“Why Do Liberals Drink Lattes?”} *American Journal of Sociology* 120 (5): 1473–1511.
-
-*Further reading*
-
-- Schelling, Thomas C. 1971. \href{https://doi.org/10.1080/0022250X.1971.9989794}{“Dynamic Models of Segregation.”} *Journal of Mathematical Sociology* 1:143–86.
-- Watts, Duncan. 1999. \href{https://doi.org/10.1086/210318}{“Networks, Dynamics, and the Small‐World Phenomenon.”} *American Journal of Sociology* 105 (2): 493–527.
-- Centola, Damon. 2015. \href{https://doi.org/10.1086/681275}{“The Social Origins of Networks and Diffusion.”} *American Journal of Sociology* 120 (5): 1295–1338.
-- Goldberg, Amir, and Sarah K. Stein. 2018. \href{https://doi.org/10.31235/osf.io/uqvd3}{“Beyond Social Contagion: Associative Diffusion and the Emergence of Cultural Variation.”} *American Sociological Review* 83 (5): 897–932.
-
-    
-## *Assignment 1 released: Applying the computational toolkit. Due 2/9 at 5pm.*
-    
-## Week 4, 2/8
-### Collecting Data Using Application Programming Interfaces
-
-*Readings*
-
-- *R4DS*: C14, 17
+- *R4DS*: C11 ("Strings with stringr"), 13 ("Dates and Times with lubridate")
 - *Bit by Bit*, C2
-- Askin, Noah, and Michael Mauskapf. 2017. \href{https://doi.org/10.1177/0003122417728662}{“What Makes Popular Culture Popular? Product Features and Optimal Differentiation in Music.”} *American Sociological Review* 82 (5): 910–44.
-- Freelon, Deen. 2018. \href{https://doi.org/10.1080/10584609.2018.1477506}{“Computational Research in the Post-API Age.”} *Political Communication* 35 (4): 665–68.
+- Baumgartner, Jason, Savvas Zannettou, Brian Keegan, Megan Squire, and Jeremy Blackburn. 2020. “The Pushshift Reddit Dataset.” In *Proceedings of the International AAAI Conference on Web and Social Media*, 14:830–39.
+- Freelon, Deen. 2018. “Computational Research in the Post-API Age.” *Political Communication* 35 (4): 665–68. https://doi.org/10.1080/10584609.2018.1477506. 
 
-## Week 5, 2/15
-### Collecting Data Using Webscraping
+*Recommended*
 
-*Readings*
+*I have included recommended readings that use a range of different APIs including Spotify (Askin and Mauskampf), Facebook (Davidson and Berezin; Bail, Brown and Mann), Google Trends (Davidson and Berezin; Bail, Brown, and Wimmer, Gross and Mann), Twitter (Mitts), and YouTube (Munger and Phillips).*
 
-- *R4DS*: C24
-- *Bit by Bit*, C6
-- Li, Fumin, Yisu Zhou, and Tianji Cai. 2021. \href{https://doi.org/10.1177/0894439319886019}{“Trails of Data: Three Cases for Collecting Web Information for Social Science Research.”} *Social Science Computer Review* 39(5):922–42.
-- Fiesler, Casey, Nate Beard, and Brian C Keegan. 2020. \href{https://doi.org/10.1609/icwsm.v14i1.7290}{“No Robots, Spiders, or Scrapers: Legal and Ethical Regulation of Data Collection Methods in Social Media Terms of Service.”} In *Proceedings of the Fourteenth International AAAI Conference on Web and Social Media*, 187–96.
-- Dahlke, Ross, Deepak Kumar, Zakir Durumeric, and Jeffrey T. Hancock. 2023. \href{https://doi.org/10.1177/08944393231218214}{“Quantifying the Systematic Bias in the Accessibility and Inaccessibility of Web Scraping Content From URL-Logged Web-Browsing Digital Trace Data.”} *Social Science Computer Review*.
-
-*Further reading*
-
-- Haber, Jaren R. 2020. \href{https://doi.org/10.1177/0038040720953218}{“Sorting Schools: A Computational Analysis of Charter School Identities and Stratification.”} *Sociology of Education* 94(1): 43-64.
-- Tjaden, Jasper. 2023. \href{https://doi.org/10.1177/01979183231208428}{“Web Scraping for Migration, Mobility, and Migrant Integration Studies: Introduction, Application, and Potential Use Cases.”} *International Migration Review*.
+- Askin, Noah, and Michael Mauskapf. 2017. “What Makes Popular Culture Popular? Product Features and Optimal Differentiation in Music.” *American Sociological Review* 82 (5): 910–44. https://doi.org/10.1177/0003122417728662.
+- Davidson, Thomas, and Mabel Berezin. 2018. “Britain First and the UK Independence Party: Social Media and Movement-Party Dynamics.” *Mobilization: An International Quarterly* 23 (4): 485–510. https://doi.org/10.17813/1086-671X-23-4-485.
+- Bail, Christopher, Taylor Brown, and Andreas Wimmer. 2019. “Prestige, Proximity, and Prejudice: How Google Search Terms Diffuse across the World.” *American Journal of Sociology* 124 (5): 1496–1548. https://doi.org/10.1086/702007.
+- Bail, Christopher, Taylor Brown, and Marcus Mann. 2017. “Channeling Hearts and Minds: Advocacy Organizations, Cognitive-Emotional Currents, and Public Conversation.” *American Sociological Review* 82(6): 1188-1213.
+- Mitts, Tamar. 2019. “From Isolation to Radicalization: Anti-Muslim Hostility and Support for ISIS in the West.” *American Political Science Review* 113 (1): 173–94. https://doi.org/10.1017/S0003055418000618.
+- Munger, Kevin, and Joseph Phillips. 2020. “Right-Wing YouTube: A Supply and Demand Perspective.” *The International Journal of Press/Politics*, 34.
+- Gross, Neil and Mann, Marcus.2017. “Is There a Ferguson Effect? Google Searches, Concern About Police Violence, and Crime in U.S. Cities, 2014-2016.” Socius. 3, 1-16.
 
 
-## Week 6, 2/22
-### Online Experiments and Surveys
+## Week 4 - For 9/18
+### Data Collection II: Online experiments and surveys
 
 *Readings*
 
-- *R4DS*: C9-11
 - *Bit by Bit*, C3-5
-- Salganik, Matthew J., and Duncan J. Watts. 2008. \href{https://doi.org/10.1177/019027250807100404}{“Leading the Herd Astray: An Experimental Study of Self-Fulfilling Prophecies in an Artificial Cultural Market.”} *Social Psychology Quarterly* 71 (4): 338–55.
-- Wang, Wei, David Rothschild, Sharad Goel, and Andrew Gelman. 2015. \href{https://doi.org/10.1016/j.ijforecast.2014.06.001}{“Forecasting Elections with Non-Representative Polls.”} *International Journal of Forecasting* 31 (3): 980–91.
-- Kramer, Adam D. I., Jamie E. Guillory, and Jeffrey T. Hancock. 2014. \href{https://doi.org/10.1073/pnas.1320040111}{“Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks.”} *Proceedings of the National Academy of Sciences* 111 (24): 8788–90.
-- Munger, Kevin. 2016. \href{https://doi.org/10.1007/s11109-016-9373-5}{“Tweetment Effects on the Tweeted: Experimentally Reducing Racist Harassment.”} *Political Behavior*, November.
-- Bail, Christopher A., Lisa P. Argyle, Taylor W. Brown, John P. Bumpus, Haohan Chen, M. B. Fallin Hunzaker, Jaemin Lee, Marcus Mann, Friedolin Merhout, and Alexander Volfovsky. 2018. \href{https://doi.org/10.1073/pnas.1804840115}{“Exposure to Opposing Views on Social Media Can Increase Political Polarization.”} *Proceedings of the National Academy of Sciences* 115(37):9216–21.
-
-*Further reading*
-
-- Guess, Andrew M., Neil Malhotra, Jennifer Pan, Pablo Barberá, Hunt Allcott, Taylor Brown, Adriana Crespo-Tenorio, Drew Dimmery, Deen Freelon, Matthew Gentzkow, Sandra González-Bailón, Edward Kennedy, Young Mie Kim, David Lazer, Devra Moehler, Brendan Nyhan, Carlos Velasco Rivera, Jaime Settle, Daniel Robert Thomas, Emily Thorson, Rebekah Tromble, Arjun Wilkins, Magdalena Wojcieszak, Beixian Xiong, Chad Kiewiet de Jonge, Annie Franco, Winter Mason, Natalie Jomini Stroud, and Joshua A. Tucker. 2023. \href{https://doi.org/10.1126/science.abp9364}{“How Do Social Media Feed Algorithms Affect Attitudes and Behavior in an Election Campaign?”} *Science* 381(6656):398–404.
-- Bail, Christopher A., D. Sunshine Hillygus, Alexander Volfovsky, Maxwell B. Allamong, Fatima Alqabandi, Diana Jordan, Graham Tierney, Christina Tucker, Andrew Trexler, and Austin van Loon. 2023. \href{https://doi.org/10.31235/osf.io/ucfbk}{“Do We Need a Social Media Accelerator?”}
-
-## *Assignment 2: Collecting and storing data released. Due 3/1 at 5pm.*
+- Salganik, Matthew J., and Duncan J. Watts. 2008. “Leading the Herd Astray: An Experimental Study of Self-Fulfilling Prophecies in an Artificial Cultural Market.” *Social Psychology Quarterly* 71 (4): 338–55. https://doi.org/10.1177/019027250807100404.
+- Kramer, Adam D. I., Jamie E. Guillory, and Jeffrey T. Hancock. 2014. “Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks.” *Proceedings of the National Academy of Sciences 111* (24): 8788–90. https://doi.org/10.1073/pnas.1320040111.
+- Munger, Kevin. 2016. “Tweetment Effects on the Tweeted: Experimentally Reducing Racist Harassment.” *Political Behavior*, November. https://doi.org/10.1007/s11109-016-9373-5.
+- Wang, Wei, David Rothschild, Sharad Goel, and Andrew Gelman. 2015. “Forecasting Elections with Non-Representative Polls.” *International Journal of Forecasting* 31 (3): 980–91. https://doi.org/10.1016/j.ijforecast.2014.06.001.
+- Christopher Bail, Lisa Argyle, Taylor W. Brown, John Bumpus, Haohan Chen, M.B. Fallin Hunzaker, Jaemin Lee, Marcus Mann, Friedolin Merhout, and Alexander Volfovsky. 2018. “Exposure to Opposing Views can Increase Political Polarization: Evidence from a Large-Scale Field Experiment on Social Media.” Proceedings of the National Academy of Sciences.
     
-## Week 7, 2/29
-### Fundamentals of Natural Language Processing 
+## Week 5 - For 9/25
+### Natural Language Processing I: Fundamentals 
 
 *Readings*
 
 - *Text Mining with R*, C1, 3-5
+- Grimmer, Justin, and Brandon Stewart. 2013. “Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts.” *Political Analysis* 21 (3): 267–97. https://doi.org/10.1093/pan/mps028.
+- DiMaggio, Paul. 2015. “Adapting Computational Text Analysis to Social Science (and Vice Versa).” *Big Data & Society* 2 (2): 205395171560290. https://doi.org/10.1177/2053951715602908.
+- Evans, James, and Pedro Aceves. 2016. “Machine Translation: Mining Text for Social Theory.” *Annual Review of Sociology* 42 (1): 21–50. https://doi.org/10.1146/annurev-soc-081715-074206.
+- Austin Van Loon. 2022. "Three Families of Automated Text Analysis". Working Paper. https://osf.io/preprints/socarxiv/htnej/ 
+
+*Recommended*
+
 - *Speech and Language Processing*, C6, pages 1-13.
-- Evans, James, and Pedro Aceves. 2016. \href{https://doi.org/10.1146/annurev-soc-081715-074206}{“Machine Translation: Mining Text for Social Theory.”} *Annual Review of Sociology* 42 (1): 21–50.
-- Nelson, Laura. 2017. \href{https://doi.org/10.1177/0049124117729703}{“Computational Grounded Theory: A Methodological Framework.”} *Sociological Methods & Research*.
+- Danescu-Niculescu-Mizil, Cristian, Lillian Lee, Bo Pang, and Jon Kleinberg. 2012. “Echoes of Power: Language Effects and Power Differences in Social Interaction.” In *Proceedings of the 21st International Conference on World Wide Web*, 699–708. ACM. http://dl.acm.org/citation.cfm?id=2187931.
+- Danescu-Niculescu-Mizil, Cristian, Robert West, Dan Jurafsky, Jure Leskovec, and Christopher Potts. 2013. “No Country for Old Members: User Lifecycle and Linguistic Change in Online Communities.” In *Proceedings of the 22nd International Conference on World Wide Web*, 307–318. http://dl.acm.org/citation.cfm?id=2488416.
+- Niculae, Vlad, Srijan Kumar, Jordan Boyd-Graber, and Cristian Danescu-Niculescu-Mizil. 2015. “Linguistic Harbingers of Betrayal: A Case Study on an Online Strategy Game.” In *Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing*. Beijing, China: ACL.
 
-*Further reading*
+## Week 6 - For 10/2
+### Natural Language Processing II: Dictionaries, word embeddings, topic models, and networks 
 
-- Grimmer, Justin, and Brandon Stewart. 2013. \href{https://doi.org/10.1093/pan/mps028}{“Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts.”} *Political Analysis* 21 (3): 267–97.
-
-## Week 8, 3/7
-### Word Embeddings and Computational Semantics
 
 *Readings*
 
 - *Text Mining with R*: C5.
 - *Speech and Language Processing*, C6, pages 17-30.
-- Hvitfeldt, Emil and Julia Silge. 2020 *Supervised Machine Learning for Text Analysis in R.*  \href{https://smltar.com/embeddings.html}{"Chapter 5: Word Embeddings"}.
-- Kozlowski, Austin, Matt Taddy, and James Evans. 2019. \href{https://doi.org/10.1177/0003122419877135}{“The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings.”} *American Sociological Review*, September.
-- Stoltz, Dustin S., and Marshall A. Taylor. 2021. \href{https://doi.org/10.1016/j.poetic.2021.101567}{“Cultural Cartography with Word Embeddings.”} *Poetics* 101567.
-- Arseniev-Koehler, Alina, and Jacob G. Foster. 2022. \href{https://doi.org/10.1177/00491241221122603}{“Machine Learning as a Model for Cultural Learning: Teaching an Algorithm What It Means to Be Fat.”} *Sociological Methods & Research* 51(4):1484–1539.
-
-
-
-*Further reading*
-
-- Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeff Dean. 2013. \href{http://papers.nips.cc/paper/5021-distributed-representations}{“Distributed Representations of Words and Phrases and Their Compositionality.”} In *Advances in Neural Information Processing Systems*, 3111–3119.
-- Hamilton, William, Jure Leskovec, and Dan Jurafsky. 2016. \href{https://aclanthology.org/P16-1141/}{“Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change.”} In *Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics*, 1489–1501.
-- Rodriguez, Pedro L., and Arthur Spirling. 2021. \href{https://doi.org/10.1086/715162}{“Word Embeddings: What Works, What Doesn’t, and How to Tell the Difference for Applied Research.”} *The Journal of Politics*.
-- Rodman, Emma. 2019. \href{https://doi.org/10.1017/pan.2019.23}{“A Timely Intervention: Tracking the Changing Meanings of Political Concepts with Word Vectors.”} *Political Analysis*, July, 1–25.
-- Gonen, Hila, and Yoav Goldberg. 2019. \href{https://aclanthology.org/N19-1061/}{“Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But Do Not Remove Them.”} In *Proceedings of NAACL-HLT*, 609–14.
-- De-Arteaga, Maria, Alexey Romanov, Hanna Wallach, Jennifer Chayes, Christian Borgs, Alexandra Chouldechova, Sahin Geyik, Krishnaram Kenthapadi, and Adam Tauman Kalai. 2019. \href{https://doi.org/10.1145/3287560.3287572}{“Bias in Bios: A Case Study of Semantic Representation Bias in a High-Stakes Setting.”} In *Proceedings of the Conference on Fairness, Accountability, and Transparency*, 120–28.
-- Zhou, Di. 2022. \href{https://doi.org/10.1177/00031224221123030}{“The Elements of Cultural Power: Novelty, Emotion, Status, and Cultural Capital.”} *American Sociological Review* 000312242211230.
-- Best, Rachel Kahn, and Alina Arseniev-Koehler. 2023. \href{https://doi.org/10.1177/00031224231197436}{“The Stigma of Diseases: Unequal Burden, Uneven Decline.”} *American Sociological Review* 88(5):938–69.
-
-
-## *Paper proposals due 3/8 at 5pm.*
-
-***SPRING BREAK***
-
-
-## Week 9, 3/21
-### Topic Modeling
-
-*Readings*
-
+- Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeff Dean. 2013. “Distributed Representations of Words and Phrases and Their Compositionality.” In *Advances in Neural Information Processing Systems*, 3111–3119. http://papers.nips.cc/paper/5021-distributed-representations.
+- Kozlowski, Austin, Matt Taddy, and James Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings.” *American Sociological Review*, September, 000312241987713. https://doi.org/10.1177/0003122419877135.
+- Arseniev-Koehler, Alina, and Jacob G. Foster. 2020. “Machine Learning as a Model for Cultural Learning: Teaching an Algorithm What It Means to Be Fat.” Working Paper. *SocArXiv*. https://doi.org/10.31235/osf.io/c9yj3.
 - *Text Mining with R*: C6.
-- Blei, David. 2012. \href{https://doi.org/10.1145/2133806.2133826}{“Probabilistic Topic Models.”} *Communications of the ACM* 55 (4): 77.
-- Mohr, John, and Petko Bogdanov. 2013. \href{https://doi.org/10.1016/j.poetic.2013.10.001}{“Introduction—Topic Models: What They Are and Why They Matter.”} *Poetics* 41 (6): 545–69.
-- DiMaggio, Paul, Manish Nag, and David Blei. 2013. \href{https://doi.org/10.1016/j.poetic.2013.08.004}{“Exploiting Affinities between Topic Modeling and the Sociological Perspective on Culture: Application to Newspaper Coverage of U.S. Government Arts Funding.”} *Poetics* 41 (6): 570–606.
-- Roberts, Margaret, Brandon M. Stewart, Dustin Tingley, Christopher Lucas, Jetson Leder-Luis, Shana Kushner Gadarian, Bethany Albertson, and David Rand. 2014. \href{https://doi.org/10.1111/ajps.12103}{“Structural Topic Models for Open-Ended Survey Responses: Structural Topic Models for Survey Responses.”} *American Journal of Political Science* 58 (4): 1064–82.
-- Karell, Daniel, and Michael Freedman. 2019. \href{https://doi.org/10.1177/0003122419859519}{“Rhetorics of Radicalism.”} *American Sociological Review* 84 (4): 726–53.
+- Mohr, John, and Petko Bogdanov. 2013. “Introduction—Topic Models: What They Are and Why They Matter.” *Poetics* 41 (6): 545–69. https://doi.org/10.1016/j.poetic.2013.10.001.
+- DiMaggio, Paul, Manish Nag, and David Blei. 2013. “Exploiting Affinities between Topic Modeling and the Sociological Perspective on Culture: Application to Newspaper Coverage of U.S. Government Arts Funding.” *Poetics* 41 (6): 570–606. https://doi.org/10.1016/j.poetic.2013.08.004.
+- Roberts, Margaret, Brandon M. Stewart, Dustin Tingley, Christopher Lucas, Jetson Leder-Luis, Shana Kushner Gadarian, Bethany Albertson, and David Rand. 2014. “Structural Topic Models for Open-Ended Survey Responses: Structural Topic Models for Survey Responses.” *American Journal of Political Science* 58 (4): 1064–82. https://doi.org/10.1111/ajps.12103.
+- Karell, Daniel, and Michael Freedman. 2019. “Rhetorics of Radicalism.” *American Sociological Review* 84 (4): 726–53. https://doi.org/10.1177/0003122419859519.
+- Blei, David 2012. “Probabilistic Topic Models.” *Communications of the ACM* 55 (4): 77. https://doi.org/10.1145/2133806.2133826.
+- Stoltz, Dustin S, and Marshall A Taylor. 2019. “Textual Spanning: Finding Discursive Holes in Text Networks.” *Socius: Sociological Research for a Dynamic World* .
+- Hamilton, William, Jure Leskovec, and Dan Jurafsky. 2016. “Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change.” In *Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics*, 1489–1501.
+- Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” In *Proceedings of NAACL-HLT 2019*, 4171–86. ACL.
+- Manning, Christopher D., Kevin Clark, John Hewitt, Urvashi Khandelwal, and Omer Levy. 2020. “Emergent Linguistic Structure in Artificial Neural Networks Trained by Self-Supervision.” *Proceedings of the National Academy of Sciences*, June, 201907367. https://doi.org/10.1073/pnas.1907367117.
+- Rodman, Emma. 2019. “A Timely Intervention: Tracking the Changing Meanings of Political Concepts with Word Vectors.” *Political Analysis*l, July, 1–25. https://doi.org/10.1017/pan.2019.23.
 
 
-*Further reading*
-
-- Greve, Henrich R., Hayagreeva Rao, Paul Vicinanza, and Echo Yan Zhou. 2022. \href{https://doi.org/10.1177/00031224221125937}{“Online Conspiracy Groups: Micro-Bloggers, Bots, and Coronavirus Conspiracy Talk on Twitter.”} *American Sociological Review* 87(6):919–49.
-- Eshima, Shusei, Kosuke Imai, and Tomoya Sasaki. 2023. \href{https://doi.org/10.1111/ajps.12779}{“Keyword-Assisted Topic Models.”} *American Journal of Political Science* 1-21.
-- Grootendorst, Maarten. 2022. \href{https://arxiv.org/abs/2203.05794}{“BERTopic: Neural Topic Modeling with a Class-Based TF-IDF Procedure.”} *ArXiv*. .
-- Pham, Chau Minh, Alexander Hoyle, Simeng Sun, and Mohit Iyyer. 2023. \href{https://arxiv.org/abs/2311.01449}{“TopicGPT: A Prompt-Based Topic Modeling Framework.”} *ArXiv*.
-
-## *Assignment 3: Natural language processing released. Due 3/29 at 5pm.*
-
-## Week 10, 3/28
-### Supervised Machine Learning and Prediction
+## Week 7 - For 10/9
+### Data Visualization
 
 *Readings*
 
-- Molina, Mario, and Filiz Garip. 2019. \href{https://doi.org/10.1146/annurev-soc-073117-041106}{“Machine Learning for Sociology.”} *Annual Review of Sociology* 45: 27–45.
-- Grimmer, Justin, Margaret E. Roberts, and Brandon M. Stewart. 2021. \href{https://doi.org/10.1146/annurev-polisci-053119-015921}{“Machine Learning for Social Science: An Agnostic Approach.”} *Annual Review of Political Science* 24 (1)
-- Hofman, Jake, Amit Sharma, and Duncan Watts. 2017. \href{https://doi.org/10.1126/science.aal3856}{“Prediction and Explanation in Social Systems.”} *Science* 355 (6324): 486–488.
-- Salganik, Matthew, Ian Lundberg, Alexander Kindel, et al. 2020. \href{https://doi.org/10.1073/pnas.1915006117}{“Measuring the Predictability of Life Outcomes with a Scientiﬁc Mass Collaboration.”} *Proceedings of the National Academy of Sciences*.
-- Garip, Filiz. 2020. \href{https://www.pnas.org/doi/pdf/10.1073/pnas.2003390117}{“What Failure to Predict Life Outcomes Can Teach Us.”} *Proceedings of the National Academy of Sciences*.
+- Healy, Kieran. 2018. *Data Visualization: A Practical Introduction*. Princeton University Press. https://socviz.co/
 
-*Further reading*
-
-- Mullainathan, Sendhil, and Jann Spiess. 2017. \href{https://doi.org/10.1257/jep.31.2.87}{“Machine Learning: An Applied Econometric Approach.”} *Journal of Economic Perspectives* 31 (2): 87–106.
-- Watts, Duncan J. 2014. \href{https://doi.org/10.1086/678271}{“Common Sense and Sociological Explanations.”} *American Journal of Sociology* 120 (2): 313–51.
-    - Turco, Catherine J., and Ezra W. Zuckerman. 2017. \href{https://doi.org/10.1086/690762}{“Verstehen for Sociology: Comment on Watts.”} *American Journal of Sociology* 122 (4): 1272–91.
-    - Watts, Duncan. 2017. \href{https://doi.org/10.1086/693954}{“Response to Turco and Zuckerman’s ‘Verstehen for Sociology.’”} *American Journal of Sociology* 122 (4): 1292–99.
-- Davidson, Thomas. 2020. \href{https://doi.org/10.1177/2378023118817702}{“Black-Box Models and Sociological Explanations: Predicting High School Grade Point Average Using Neural Networks.”} *Socius: Sociological Research for a Dynamic World* 5 (January).
-
-## *Paper initial data collection report due 4/5 at 5pm.*
-
-## Week 11, 4/4
-### Supervised text classification
-
-*Readings*
-
-- Hanna, Alex. 2013. \href{
-https://doi.org/10.17813/maiq.18.4.m1g180620x7n1542
-}{“Computer-Aided Content Analysis of Digitally Enabled Movements.”} *Mobilization: An International Quarterly* 18 (4): 367–388.
-- Nelson, Laura K., Derek Burk, Marcel Knudsen, and Leslie McCall. 2018. \href{https://doi.org/10.1177/0049124118769114}{“The Future of Coding: A Comparison of Hand-Coding and Three Types of Computer-Assisted Text Analysis Methods.”} *Sociological Methods & Research*.
-- Barberá, Pablo, Amber E. Boydstun, Suzanna Linn, Ryan McMahon, and Jonathan Nagler. 2020. \href{https://doi.org/10.1017/pan.2020.8}{“Automated Text Classification of News Articles: A Practical Guide.”} *Political Analysis*, June, 1–24.
-- Dixon, Lucas, John Li, Jeffrey Sorensen, Nithum Thain, and Lucy Vasserman. 2018. \href{https://doi.org/10.1145/3278721.3278729}{“Measuring and Mitigating Unintended Bias in Text Classification.”} In *Proceedings of the 2018 AAAI/ACM Conference on AI, Ethics, and Society* 67–73.
-
-
-*Further reading*
-
-<!--TODO: Update with more recent papers-->
-
-- Flores, René D. 2017. \href{https://doi.org/10.1086/692983}{“Do Anti-Immigrant Laws Shape Public Sentiment? A Study of Arizona’s SB 1070 Using Twitter Data.”} *American Journal of Sociology* 123(2):333–84.
-- Davidson, Thomas, Debasmita Bhattacharya, and Ingmar Weber. 2019. \href{https://doi.org/10.18653/v1/W19-3504}{“Racial Bias in Hate Speech and Abusive Language Detection Datasets.”} In *Proceedings of the Third Workshop on Abusive Language Online*, 25–35.
-- Miller, Blake, Fridolin Linder, and Walter R. Mebane, Jr. 2019. \href{https://doi.org/10.1017/pan.2020.4 }{“Active Learning Approaches for Labeling Text: Review and Assessment of the Performance of Active Learning Approaches.”} *Political Analysis* 28(4): 532-551.
-- King, Gary, Patrick Lam, and Margaret E. Roberts. 2017. \href{https://www.jstor.org/stable/26379539}{“Computer-Assisted Keyword and Document Set Discovery from Unstructured Text.”} *American Journal of Political Science* 61 (4): 971–88.
-
-## *Assignment 4: Machine learning and text classification released. Due 4/12 at 5pm*
-
-## Week 12, 4/11
-### (Large) Language Models
-
-*Readings*
-
-- Danescu-Niculescu-Mizil, Cristian, Robert West, Dan Jurafsky, Jure Leskovec, and Christopher Potts. 2013. \href{http://dl.acm.org/citation.cfm?id=2488416}{“No Country for Old Members: User Lifecycle and Linguistic Change in Online Communities.”} In *Proceedings of the 22nd International Conference on World Wide Web*, 307–318.
-- Manning, Christopher D. 2022. \href{https://doi.org/10.1162/daed_a_01905}{"Human Language Understanding \& Reasoning."} *Daedalus* 151(2):127–38.
-- Wankmüller, Sandra. 2022. \href{https://doi.org/10.1177/00491241221134527}{“Introduction to Neural Transfer Learning With Transformers for Social Science Text Analysis.”} *Sociological Methods & Research*.
-- Bender, Emily M, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. 2021. \href{https://dl.acm.org/doi/10.1145/3442188.3445922}{“On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?”} In *Conference on Fairness, Accountability, and Transparency* (FAccT ’21).
-
-*Further reading*
-
-- Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. \href{https://papers.nips.cc/paper/7181-attention-is-all-you-need}{“Attention Is All You Need.”} in *Advances in Neural Information Processing Systems*.
-- Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. \href{https://aclanthology.org/N19-1423}{“BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.”} in *Proceedings of NAACL-HLT*.
-- Brown, Tom B., and many others. 2020. \href{https://arxiv.org/pdf/2005.14165.pdf}{“Language Models Are Few-Shot Learners.”} *ArXiv*
-- Widmann, Tobias, and Maximilian Wich. 2022. \href{https://doi.org/10.1017/pan.2022.15}{“Creating and Comparing Dictionary, Word Embedding, and Transformer-Based Models to Measure Discrete Emotions in German Political Text.”} *Political Analysis* 1–16.
-- Jensen, Jeffrey L., Daniel Karell, Cole Tanigawa-Lau, Nizar Habash, Mai Oudah, and Dhia Fairus Shofia Fani. 2022. \href{https://doi.org/10.1177/00811750211053370}{“Language Models in Sociological Research: An Application to Classifying Large Administrative Data and Measuring Religiosity.”} *Sociological Methodology* 52(1):30–52.
-- Bonikowski, Bart, Yuchen Luo, and Oscar Stuhler. 2022. \href{https://doi.org/10.1177/00491241221122317}{“Politics as Usual? Measuring Populism, Nationalism, and Authoritarianism in U.S. Presidential Campaigns (1952–2020) with Neural Language Models.”} *Sociological Methods & Research* 51(4):1721–87.
-
-## *Paper preliminary results due 4/19 at 5pm.*
-
-## Week 13, 4/18
-### Computer Vision and Multimodal Models
-
-<!--TODO: Update with recent literature,including polisci by Torres and using street cameras
-Also add CLIP / multimodal-->
-
-*Readings*
-
-- Krizhevsky, Alex, Ilya Sutskever, and Geoffrey Hinton. 2012. \href{https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html}{“Imagenet Classification with Deep Convolutional Neural Networks.”} In *Advances in Neural Information Processing Systems*, 1097–1105.
-- Torres, Michelle, and Francisco Cantú. 2021. \href{https://doi.org/10.1017/pan.2021.9}{“Learning to See: Convolutional Neural Networks for the Analysis of Social Science Data.”} *Political Analysis* 1–19.
-- Zhang, Han, and Jennifer Pan. 2019. \href{https://doi.org/10.1177/0081175019860244}{“CASM: A Deep-Learning Approach for Identifying Collective Action Events with Text and Image Data from Social Media.”} *Sociological Methodology* 49 (1): 1–57.
-- Hwang, Jackelyn, Nima Dahir, Mayuka Sarukkai, and Gabby Wright. 2023. \href{https://doi.org/10.1177/00491241231171945}{“Curating Training Data for Reliable Large-Scale Visual Data Analysis: Lessons from Identifying Trash in Street View Imagery.”} *Sociological Methods & Research* 004912412311719.
-
-
-
-*Further reading*
-
-- Jean, N., M. Burke, M. Xie, W. M. Davis, D. B. Lobell, and S. Ermon. 2016. \href{https://doi.org/10.1126/science.aaf7894}{“Combining Satellite Imagery and Machine Learning to Predict Poverty.”} *Science* 353 (6301): 790–94.
-- Gebru, Timnit, Jonathan Krause, Yilun Wang, Duyun Chen, Jia Deng, Erez Lieberman Aiden, and Li Fei-Fei. 2017. \href{https://doi.org/10.1073/pnas.1700035114}{“Using Deep Learning and Google Street View to Estimate the Demographic Makeup of Neighborhoods across the United States.”} *Proceedings of the National Academy of Sciences* 114 (50): 13108–13.
-- Buolamwini, Joy, and Timnit Gebru. 2018. \href{https://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf}{“Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classiﬁcation.”} In *Proceedings of Machine Learning Research*, 81:1–15.
-- Olah, Chris, Alexander Mordvintsev, and Ludwig Schubert. 2017. \href{https://doi.org/10.23915/distill.00007}{“Feature Visualization.”} *Distill*.
-- Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, et al. 2021. \href{https://openai.com/blog/clip/}{“Learning Transferable Visual Models From Natural Language Supervision.”} OpenAI.
-- Torres, Michelle. 2023. \href{https://doi.org/10.1017/pan.2023.32}{“A Framework for the Unsupervised and Semi-Supervised Analysis of Visual Frames.”} *Political Analysis* 1–22.
-
-
-## Week 14, 4/25
-### Student presentations
-
-- 10 minute presentation, plus Q&A.
 
 # Final paper
-*Final paper due via email on 5/3 at 5pm*
+*Final paper due on Saturday 10/20 at 5pm ET*
 
 
 
