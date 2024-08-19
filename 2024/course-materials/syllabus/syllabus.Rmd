@@ -1,11 +1,9 @@
 ---
 output: 
-  pdf_document:
-    keep_tex: true
+  pdf_document: 
+    keep_tex: yes
     fig_caption: yes
-    latex_engine: pdflatex
 geometry: margin=1in
-
 title: 
      |
      | SOC 681
@@ -13,10 +11,8 @@ title:
      | Purdue University
      |
      |  Syllabus
-
 author: Dr. Marcus Mann 
 date: "Fall 2024"
-
 fontfamily: mathpazo
 fontsize: 10pt
 header-includes:

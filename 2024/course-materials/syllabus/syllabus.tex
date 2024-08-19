@@ -1,0 +1,525 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage[]{mathpazo}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\linespread{1.05}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdfauthor={Dr.~Marcus Mann},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{SOC 681\\
+COMPUTATIONAL SOCIAL SCIENCE USING R\\
+Purdue University\\
+\strut \\
+\hspace*{0.333em}Syllabus}
+\author{Dr.~Marcus Mann}
+\date{Fall 2024}
+
+\begin{document}
+\maketitle
+
+\hypertarget{contact-and-logistics}{%
+\section{CONTACT AND LOGISTICS}\label{contact-and-logistics}}
+
+E-mail: \texttt{mannml@purdue.edu}
+
+Website: \texttt{https://github.com/marcone84/computational-sociology-1}
+
+Class meetings: Wednesday 1:30-4:20 p.m.
+
+Office hours: by appointment.
+
+\hypertarget{course-description}{%
+\section{COURSE DESCRIPTION}\label{course-description}}
+
+This (crash) course is designed to provide a friendly and broad
+introduction to computational methods in social science using R. First,
+we will discuss the history and evolving role of computational methods
+in social science and their attendant implications for conducting
+ethical and generative research. Then we will discuss and practice the
+most basic programming skills in R including setting working
+directories, searching for and loading relevant packages, and basic date
+cleaning and manipulation. After this, the course will focus on
+introducing and applying a specific method of data collection or
+analysis every week. These will include 1) data wrangling, 2) working
+with API's, 3) experiments and surveys, 4) text analysis methods, 5) and
+data visualization. While this course does aim to broaden your awareness
+and skills in various kinds of data collection and analysis, it is not a
+statistics course, so do not expect detailed coverage of specific
+statistical methods or strategies. In general, we will study and discuss
+how computational methods have changed and broadened social scientific
+research, when they should and should not be applied, and - most
+importantly - how they can help you with your specific research agenda.
+
+\hypertarget{prerequisites-and-preparation}{%
+\section{PREREQUISITES AND
+PREPARATION}\label{prerequisites-and-preparation}}
+
+This course assumes no experience in R or other programming languages
+and is meant to be a gentle introduction to using R for social
+scientific research. That said, online resources are readily available
+to attain at least a rudimentary understanding of the basic skills
+needed to begin coding in R. One such resource is the Summer Institute
+in Computational Social Science websit here:
+\url{https://sicss.io/overview}
+
+\hypertarget{assessment}{%
+\section{ASSESSMENT}\label{assessment}}
+
+100\% of your grade will be based on a ``final paper'' (at least 5,000
+words) that uses some kind of computational method covered in this
+course. This paper will be assessed by 1) relevance to a particular
+field, 2) justification of hypotheses, 3) justification of computational
+method, and 3) clear communication of results (including at least one
+data viz) and implications. This paper has no other parameters.
+
+\hypertarget{readings}{%
+\section{READINGS}\label{readings}}
+
+There are weekly reading assignments for this course. These readings
+include methodological texts, reviews of relevant methodological and
+theoretical considerations, and examples of how sociologists and other
+social scientists apply computational approaches in their research.
+Given the range and complexity of some of the approaches we will cover
+in the course, I have included a diverse set of readings for each topic.
+Some students may find the instructional readings more useful whereas
+others may benefit from the academic articles applying these methods to
+substantive research questions.
+
+\hypertarget{require-texts-and-useful-references}{%
+\subsection{Require texts and useful
+references}\label{require-texts-and-useful-references}}
+
+\emph{* indicates a required text. All required texts and useful
+references are available for free online on the listed websites.}
+
+\begin{itemize}
+\tightlist
+\item
+  *Matthew Salganik. 2017. \emph{Bit by Bit}. Princeton University
+  Press. \url{https://www.bitbybitbook.com/en/1st-ed/preface/}
+\item
+  *Wickham, Hadley, and Garrett Grolemund. 2016. \emph{R for Data
+  Science: Import, Tidy, Transform, Visualize, and Model Data}.
+  (\emph{R4DS}). O'Reilly Media, Inc. \url{https://r4ds.had.co.nz/}
+\item
+  *Silge, Julia, and David Robinson. 2017. \emph{Text Mining with R: A
+  Tidy Approach.} O'Reilly Media.
+  \url{https://www.tidytextmining.com/dtm.html}.
+\item
+  *Healy, Kieran. 2018. \emph{Data Visualization: A Practical
+  Introduction}. Princeton University Press. \url{https://socviz.co/}
+\end{itemize}
+
+\hypertarget{course-policies}{%
+\section{COURSE POLICIES}\label{course-policies}}
+
+The Purdue Sociology Department strives to create an environment that
+supports and affirms diversity in all manifestations, including race,
+ethnicity, gender, sexual orientation, religion, age, social class,
+disability status, region/country of origin, and political orientation.
+This class will be a space for tolerance, respect, and mutual dialogue.
+Students must abide by the Code of Student Conduct at all times,
+including during lectures and in participation online.
+
+All students must abide by the university's Academic Integrity Policy.
+Violations of academic integrity will result in disciplinary action.
+
+In accordance with University policy, if you have a documented
+disability and require accommodations to obtain equal access in this
+course, please contact me during the first week of classes. Students
+with disabilities must be registered with the Office of Student
+Disability Services and must provide verification of their eligibility
+for such accommodations.
+
+\hypertarget{course-outline}{%
+\section{COURSE OUTLINE}\label{course-outline}}
+
+\textbf{\emph{This outline is tentative and subject to change.}}
+
+\hypertarget{week-1---for-828}{%
+\subsection{Week 1 - For 8/28}\label{week-1---for-828}}
+
+\hypertarget{introduction-to-computational-sociology}{%
+\subsubsection{Introduction to Computational
+Sociology}\label{introduction-to-computational-sociology}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{R4DS}: Preface, ``Chapters'' 4-7 on website
+\item
+  \emph{Bit by Bit}, Chapter 1
+\item
+  Lazer, David, et al.~2009. ``Computational Social Science.''
+  \emph{Science} 323 (5915): 721--23.
+  \url{https://www.science.org/doi/10.1126/science.1167742}.
+\item
+  Edelmann, Achim, Tom Wolff, Danielle Montagne, and Christopher A.
+  Bail. 2020. ``Computational Social Science and Sociology.''
+  \emph{Annual Review of Sociology} 46 (1):
+  \url{https://www.annualreviews.org/doi/abs/10.1146/annurev-soc-121919-054621}
+\end{itemize}
+
+\hypertarget{week-2---for-94}{%
+\subsection{Week 2 - For 9/4}\label{week-2---for-94}}
+
+\hypertarget{data-structures-wrangling-and-the-tidyverse}{%
+\subsubsection{Data Structures, Wrangling, and the
+Tidyverse}\label{data-structures-wrangling-and-the-tidyverse}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{R4DS}: ``Chapters'' 9-13 on website
+\item
+  Golder, Scott A., and Michael W. Macy. 2014. ``Digital Footprints:
+  Opportunities and Challenges for Online Social Research.''
+  \emph{Annual Review of Sociology} 40 (1): 129--52.
+  \url{https://doi.org/10.1146/annurev-soc-071913-043145}.
+\item
+  Bail, Christopher A. 2014. ``The Cultural Environment: Measuring
+  Culture with Big Data.'' \emph{Theory and Society} 43 (3--4): 465--82.
+  \url{https://doi.org/10.1007/s11186-014-9216-5}.
+\end{itemize}
+
+\hypertarget{week-3---for-911}{%
+\subsection{Week 3 - For 9/11}\label{week-3---for-911}}
+
+\hypertarget{data-collection-i-apis}{%
+\subsubsection{Data Collection I: APIs}\label{data-collection-i-apis}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{R4DS}: C11 (``Strings with stringr''), 13 (``Dates and Times
+  with lubridate'')
+\item
+  \emph{Bit by Bit}, C2
+\item
+  Baumgartner, Jason, Savvas Zannettou, Brian Keegan, Megan Squire, and
+  Jeremy Blackburn. 2020. ``The Pushshift Reddit Dataset.'' In
+  \emph{Proceedings of the International AAAI Conference on Web and
+  Social Media}, 14:830--39.
+\item
+  Freelon, Deen. 2018. ``Computational Research in the Post-API Age.''
+  \emph{Political Communication} 35 (4): 665--68.
+  \url{https://doi.org/10.1080/10584609.2018.1477506}.
+\end{itemize}
+
+\emph{Recommended}
+
+\emph{I have included recommended readings that use a range of different
+APIs including Spotify (Askin and Mauskampf), Facebook (Davidson and
+Berezin; Bail, Brown and Mann), Google Trends (Davidson and Berezin;
+Bail, Brown, and Wimmer, Gross and Mann), Twitter (Mitts), and YouTube
+(Munger and Phillips).}
+
+\begin{itemize}
+\tightlist
+\item
+  Askin, Noah, and Michael Mauskapf. 2017. ``What Makes Popular Culture
+  Popular? Product Features and Optimal Differentiation in Music.''
+  \emph{American Sociological Review} 82 (5): 910--44.
+  \url{https://doi.org/10.1177/0003122417728662}.
+\item
+  Davidson, Thomas, and Mabel Berezin. 2018. ``Britain First and the UK
+  Independence Party: Social Media and Movement-Party Dynamics.''
+  \emph{Mobilization: An International Quarterly} 23 (4): 485--510.
+  \url{https://doi.org/10.17813/1086-671X-23-4-485}.
+\item
+  Bail, Christopher, Taylor Brown, and Andreas Wimmer. 2019. ``Prestige,
+  Proximity, and Prejudice: How Google Search Terms Diffuse across the
+  World.'' \emph{American Journal of Sociology} 124 (5): 1496--1548.
+  \url{https://doi.org/10.1086/702007}.
+\item
+  Bail, Christopher, Taylor Brown, and Marcus Mann. 2017. ``Channeling
+  Hearts and Minds: Advocacy Organizations, Cognitive-Emotional
+  Currents, and Public Conversation.'' \emph{American Sociological
+  Review} 82(6): 1188-1213.
+\item
+  Mitts, Tamar. 2019. ``From Isolation to Radicalization: Anti-Muslim
+  Hostility and Support for ISIS in the West.'' \emph{American Political
+  Science Review} 113 (1): 173--94.
+  \url{https://doi.org/10.1017/S0003055418000618}.
+\item
+  Munger, Kevin, and Joseph Phillips. 2020. ``Right-Wing YouTube: A
+  Supply and Demand Perspective.'' \emph{The International Journal of
+  Press/Politics}, 34.
+\item
+  Gross, Neil and Mann, Marcus.2017. ``Is There a Ferguson Effect?
+  Google Searches, Concern About Police Violence, and Crime in U.S.
+  Cities, 2014-2016.'' Socius. 3, 1-16.
+\end{itemize}
+
+\hypertarget{week-4---for-918}{%
+\subsection{Week 4 - For 9/18}\label{week-4---for-918}}
+
+\hypertarget{data-collection-ii-online-experiments-and-surveys}{%
+\subsubsection{Data Collection II: Online experiments and
+surveys}\label{data-collection-ii-online-experiments-and-surveys}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Bit by Bit}, C3-5
+\item
+  Salganik, Matthew J., and Duncan J. Watts. 2008. ``Leading the Herd
+  Astray: An Experimental Study of Self-Fulfilling Prophecies in an
+  Artificial Cultural Market.'' \emph{Social Psychology Quarterly} 71
+  (4): 338--55. \url{https://doi.org/10.1177/019027250807100404}.
+\item
+  Kramer, Adam D. I., Jamie E. Guillory, and Jeffrey T. Hancock. 2014.
+  ``Experimental Evidence of Massive-Scale Emotional Contagion through
+  Social Networks.'' \emph{Proceedings of the National Academy of
+  Sciences 111} (24): 8788--90.
+  \url{https://doi.org/10.1073/pnas.1320040111}.
+\item
+  Munger, Kevin. 2016. ``Tweetment Effects on the Tweeted:
+  Experimentally Reducing Racist Harassment.'' \emph{Political
+  Behavior}, November. \url{https://doi.org/10.1007/s11109-016-9373-5}.
+\item
+  Wang, Wei, David Rothschild, Sharad Goel, and Andrew Gelman. 2015.
+  ``Forecasting Elections with Non-Representative Polls.''
+  \emph{International Journal of Forecasting} 31 (3): 980--91.
+  \url{https://doi.org/10.1016/j.ijforecast.2014.06.001}.
+\item
+  Christopher Bail, Lisa Argyle, Taylor W. Brown, John Bumpus, Haohan
+  Chen, M.B. Fallin Hunzaker, Jaemin Lee, Marcus Mann, Friedolin
+  Merhout, and Alexander Volfovsky. 2018. ``Exposure to Opposing Views
+  can Increase Political Polarization: Evidence from a Large-Scale Field
+  Experiment on Social Media.'' Proceedings of the National Academy of
+  Sciences.
+\end{itemize}
+
+\hypertarget{week-5---for-925}{%
+\subsection{Week 5 - For 9/25}\label{week-5---for-925}}
+
+\hypertarget{natural-language-processing-i-fundamentals}{%
+\subsubsection{Natural Language Processing I:
+Fundamentals}\label{natural-language-processing-i-fundamentals}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Text Mining with R}, C1, 3-5
+\item
+  Grimmer, Justin, and Brandon Stewart. 2013. ``Text as Data: The
+  Promise and Pitfalls of Automatic Content Analysis Methods for
+  Political Texts.'' \emph{Political Analysis} 21 (3): 267--97.
+  \url{https://doi.org/10.1093/pan/mps028}.
+\item
+  DiMaggio, Paul. 2015. ``Adapting Computational Text Analysis to Social
+  Science (and Vice Versa).'' \emph{Big Data \& Society} 2 (2):
+  205395171560290. \url{https://doi.org/10.1177/2053951715602908}.
+\item
+  Evans, James, and Pedro Aceves. 2016. ``Machine Translation: Mining
+  Text for Social Theory.'' \emph{Annual Review of Sociology} 42 (1):
+  21--50. \url{https://doi.org/10.1146/annurev-soc-081715-074206}.
+\item
+  Austin Van Loon. 2022. ``Three Families of Automated Text Analysis''.
+  Working Paper. \url{https://osf.io/preprints/socarxiv/htnej/}
+\end{itemize}
+
+\emph{Recommended}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Speech and Language Processing}, C6, pages 1-13.
+\item
+  Danescu-Niculescu-Mizil, Cristian, Lillian Lee, Bo Pang, and Jon
+  Kleinberg. 2012. ``Echoes of Power: Language Effects and Power
+  Differences in Social Interaction.'' In \emph{Proceedings of the 21st
+  International Conference on World Wide Web}, 699--708. ACM.
+  \url{http://dl.acm.org/citation.cfm?id=2187931}.
+\item
+  Danescu-Niculescu-Mizil, Cristian, Robert West, Dan Jurafsky, Jure
+  Leskovec, and Christopher Potts. 2013. ``No Country for Old Members:
+  User Lifecycle and Linguistic Change in Online Communities.'' In
+  \emph{Proceedings of the 22nd International Conference on World Wide
+  Web}, 307--318. \url{http://dl.acm.org/citation.cfm?id=2488416}.
+\item
+  Niculae, Vlad, Srijan Kumar, Jordan Boyd-Graber, and Cristian
+  Danescu-Niculescu-Mizil. 2015. ``Linguistic Harbingers of Betrayal: A
+  Case Study on an Online Strategy Game.'' In \emph{Proceedings of the
+  53rd Annual Meeting of the Association for Computational Linguistics
+  and the 7th International Joint Conference on Natural Language
+  Processing}. Beijing, China: ACL.
+\end{itemize}
+
+\hypertarget{week-6---for-102}{%
+\subsection{Week 6 - For 10/2}\label{week-6---for-102}}
+
+\hypertarget{natural-language-processing-ii-dictionaries-word-embeddings-topic-models-and-networks}{%
+\subsubsection{Natural Language Processing II: Dictionaries, word
+embeddings, topic models, and
+networks}\label{natural-language-processing-ii-dictionaries-word-embeddings-topic-models-and-networks}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Text Mining with R}: C5.
+\item
+  \emph{Speech and Language Processing}, C6, pages 17-30.
+\item
+  Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeff Dean.
+  2013. ``Distributed Representations of Words and Phrases and Their
+  Compositionality.'' In \emph{Advances in Neural Information Processing
+  Systems}, 3111--3119.
+  \url{http://papers.nips.cc/paper/5021-distributed-representations}.
+\item
+  Kozlowski, Austin, Matt Taddy, and James Evans. 2019. ``The Geometry
+  of Culture: Analyzing the Meanings of Class through Word Embeddings.''
+  \emph{American Sociological Review}, September, 000312241987713.
+  \url{https://doi.org/10.1177/0003122419877135}.
+\item
+  Arseniev-Koehler, Alina, and Jacob G. Foster. 2020. ``Machine Learning
+  as a Model for Cultural Learning: Teaching an Algorithm What It Means
+  to Be Fat.'' Working Paper. \emph{SocArXiv}.
+  \url{https://doi.org/10.31235/osf.io/c9yj3}.
+\item
+  \emph{Text Mining with R}: C6.
+\item
+  Mohr, John, and Petko Bogdanov. 2013. ``Introduction---Topic Models:
+  What They Are and Why They Matter.'' \emph{Poetics} 41 (6): 545--69.
+  \url{https://doi.org/10.1016/j.poetic.2013.10.001}.
+\item
+  DiMaggio, Paul, Manish Nag, and David Blei. 2013. ``Exploiting
+  Affinities between Topic Modeling and the Sociological Perspective on
+  Culture: Application to Newspaper Coverage of U.S. Government Arts
+  Funding.'' \emph{Poetics} 41 (6): 570--606.
+  \url{https://doi.org/10.1016/j.poetic.2013.08.004}.
+\item
+  Roberts, Margaret, Brandon M. Stewart, Dustin Tingley, Christopher
+  Lucas, Jetson Leder-Luis, Shana Kushner Gadarian, Bethany Albertson,
+  and David Rand. 2014. ``Structural Topic Models for Open-Ended Survey
+  Responses: Structural Topic Models for Survey Responses.''
+  \emph{American Journal of Political Science} 58 (4): 1064--82.
+  \url{https://doi.org/10.1111/ajps.12103}.
+\item
+  Karell, Daniel, and Michael Freedman. 2019. ``Rhetorics of
+  Radicalism.'' \emph{American Sociological Review} 84 (4): 726--53.
+  \url{https://doi.org/10.1177/0003122419859519}.
+\item
+  Blei, David 2012. ``Probabilistic Topic Models.'' \emph{Communications
+  of the ACM} 55 (4): 77. \url{https://doi.org/10.1145/2133806.2133826}.
+\item
+  Stoltz, Dustin S, and Marshall A Taylor. 2019. ``Textual Spanning:
+  Finding Discursive Holes in Text Networks.'' \emph{Socius:
+  Sociological Research for a Dynamic World} .
+\item
+  Hamilton, William, Jure Leskovec, and Dan Jurafsky. 2016. ``Diachronic
+  Word Embeddings Reveal Statistical Laws of Semantic Change.'' In
+  \emph{Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics}, 1489--1501.
+\item
+  Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+  2019. ``BERT: Pre-Training of Deep Bidirectional Transformers for
+  Language Understanding.'' In \emph{Proceedings of NAACL-HLT 2019},
+  4171--86. ACL.
+\item
+  Manning, Christopher D., Kevin Clark, John Hewitt, Urvashi Khandelwal,
+  and Omer Levy. 2020. ``Emergent Linguistic Structure in Artificial
+  Neural Networks Trained by Self-Supervision.'' \emph{Proceedings of
+  the National Academy of Sciences}, June, 201907367.
+  \url{https://doi.org/10.1073/pnas.1907367117}.
+\item
+  Rodman, Emma. 2019. ``A Timely Intervention: Tracking the Changing
+  Meanings of Political Concepts with Word Vectors.'' \emph{Political
+  Analysis}l, July, 1--25. \url{https://doi.org/10.1017/pan.2019.23}.
+\end{itemize}
+
+\hypertarget{week-7---for-109}{%
+\subsection{Week 7 - For 10/9}\label{week-7---for-109}}
+
+\hypertarget{data-visualization}{%
+\subsubsection{Data Visualization}\label{data-visualization}}
+
+\emph{Readings}
+
+\begin{itemize}
+\tightlist
+\item
+  Healy, Kieran. 2018. \emph{Data Visualization: A Practical
+  Introduction}. Princeton University Press. \url{https://socviz.co/}
+\end{itemize}
+
+\hypertarget{final-paper}{%
+\section{Final paper}\label{final-paper}}
+
+\emph{Final paper due on Saturday 10/20 at 5pm ET}
+
+\end{document}
