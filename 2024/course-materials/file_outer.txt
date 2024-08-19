@@ -1,1 +1,0 @@
-I live in the outer directory, one step outside `slides`. `~/../file_inner.txt`
