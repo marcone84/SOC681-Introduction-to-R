@@ -42,7 +42,7 @@ This (crash) course is designed to provide a friendly and broad introduction to 
 This course assumes no experience in R or other programming languages and is meant to be a gentle introduction to using R for social scientific research. That said, online resources are readily available to attain at least a rudimentary understanding of the basic skills needed to begin coding in R. One such resource is the Summer Institute in Computational Social Science websit here: https://sicss.io/overview 
 
 # ASSESSMENT
-100% of your grade will be based on a "final paper" (at least 5,000 words) that uses some kind of computational method covered in this course. This paper will be assessed by 1) relevance to a particular field, 2) justification of hypotheses, 3) justification of computational method, and 3) clear communication of results (including at least one data viz) and implications. This paper has no other parameters. 
+100% of your grade will be based on a "final paper" (~3-5 pages) that uses some kind of computational method covered in this course. This paper will be assessed by 1) relevance to a particular field, 2) justification of hypotheses, 3) justification and demonstration of computational method, and 3) clear communication of results (including at least one data viz) and implications. This paper has no other parameters. 
 
 # READINGS
 There are weekly reading assignments for this course. These readings include methodological texts, reviews of relevant methodological and theoretical considerations, and examples of how sociologists and other social scientists apply computational approaches in their research. Given the range and complexity of some of the approaches we will cover in the course, I have included a diverse set of readings for each topic. Some students may find the instructional readings more useful whereas others may benefit from the academic articles applying these methods to substantive research questions. 
@@ -175,6 +175,9 @@ In accordance with University policy, if you have a documented disability and re
 
 - *Text Mining with R*: C5.
 - *Speech and Language Processing*, C6, pages 17-30.
+
+*Recommended*
+
 - Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeff Dean. 2013. “Distributed Representations of Words and Phrases and Their Compositionality.” In *Advances in Neural Information Processing Systems*, 3111–3119. http://papers.nips.cc/paper/5021-distributed-representations.
 - Kozlowski, Austin, Matt Taddy, and James Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings.” *American Sociological Review*, September, 000312241987713. https://doi.org/10.1177/0003122419877135.
 - Arseniev-Koehler, Alina, and Jacob G. Foster. 2020. “Machine Learning as a Model for Cultural Learning: Teaching an Algorithm What It Means to Be Fat.” Working Paper. *SocArXiv*. https://doi.org/10.31235/osf.io/c9yj3.
