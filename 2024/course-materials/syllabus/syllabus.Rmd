@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 E-mail: ``mannml@purdue.edu``
 
-Website: ``https://github.com/marcone84/computational-sociology-1``
+Website: ``https://github.com/marcone84/SOC681-Introduction-to-R``
 
 Class meetings: Wednesday 1:30-4:20 p.m. 
 
